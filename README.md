@@ -4,21 +4,26 @@ A minimal Flask web app: a login form, and a page that greets the user after a
 successful login. Intended as a small, self-contained local target for security
 demonstrations.
 
+The complete deployment lives in [`demo-talk/`](demo-talk/).
+
 ## Run
 
 ```bash
-uv sync
-uv run acme-portal        # serves on http://localhost:8888
+./demo-talk/start.sh        # syncs deps and serves on http://localhost:8888
 ```
 
-Or run the module directly:
+Or manually:
 
 ```bash
-uv run python app.py
+cd demo-talk
+uv sync
+uv run acme-portal
 ```
 
-Set `PORT`, `PORTAL_USER`, `PORTAL_PASS`, or `SECRET_KEY` via environment
-variables to override the defaults.
+Login: **`pentest`** / **`we-got-graybox-reds`** → `hello pwned`.
+
+Override `PORT`, `PORTAL_USER`, `PORTAL_PASS`, or `SECRET_KEY` via environment
+variables.
 
 ## Routes
 
