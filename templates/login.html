@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ACME Portal &middot; Sign in</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+           background: #f3f4f6; color: #111827; display: flex; min-height: 100vh;
+           align-items: center; justify-content: center; }
+    .card { background: #fff; width: 340px; padding: 32px 28px; border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.08); }
+    .brand { font-size: 20px; font-weight: 700; margin: 0 0 4px; }
+    .sub { margin: 0 0 24px; color: #6b7280; font-size: 13px; }
+    label { display: block; font-size: 13px; margin: 14px 0 6px; color: #374151; }
+    input { width: 100%; padding: 9px 11px; border: 1px solid #d1d5db; border-radius: 6px;
+            font-size: 14px; }
+    button { width: 100%; margin-top: 22px; padding: 10px; border: 0; border-radius: 6px;
+             background: #2563eb; color: #fff; font-size: 14px; font-weight: 600; cursor: pointer; }
+    button:hover { background: #1d4ed8; }
+    .error { margin-top: 16px; padding: 9px 11px; background: #fef2f2; color: #b91c1c;
+             border: 1px solid #fecaca; border-radius: 6px; font-size: 13px; }
+    .foot { margin-top: 22px; text-align: center; color: #9ca3af; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <form class="card" method="post" action="/">
+    <h1 class="brand">ACME Portal</h1>
+    <p class="sub">Sign in to your account</p>
+    <label for="username">Username</label>
+    <input id="username" name="username" autocomplete="username" autofocus>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" autocomplete="current-password">
+    <button type="submit">Sign in</button>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+    <p class="foot">&copy; ACME Corp &middot; Internal use only</p>
+  </form>
+</body>
+</html>
