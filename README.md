@@ -8,7 +8,7 @@ demonstrations.
 
 ```bash
 uv sync
-uv run acme-portal        # serves on http://localhost:8080
+uv run acme-portal        # serves on http://localhost:8888
 ```
 
 Or run the module directly:

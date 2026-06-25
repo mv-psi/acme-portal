@@ -50,7 +50,7 @@ def logout():
 
 
 def main():
-    port = int(os.environ.get("PORT", "8080"))
+    port = int(os.environ.get("PORT", "8888"))
     app.run(host="0.0.0.0", port=port, debug=False)
 
 
