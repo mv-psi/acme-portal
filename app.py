@@ -18,8 +18,8 @@ app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "dev-secret-change-me")
 
 # Demo credentials (intentionally weak).
-USERNAME = os.environ.get("PORTAL_USER", "admin")
-PASSWORD = os.environ.get("PORTAL_PASS", "admin")
+USERNAME = os.environ.get("PORTAL_USER", "pentest")
+PASSWORD = os.environ.get("PORTAL_PASS", "we-got-graybox-reds")
 
 
 @app.route("/", methods=["GET", "POST"])
